@@ -11,7 +11,7 @@
 设置断点：
 ![断点][Breakpoint]
 运行并输入：
-```
+```Lua
 print("hello lua")
 ```
 回车后即命中断点：
@@ -23,7 +23,7 @@ print("hello lua")
 在 `X:\Lua51` 目录下创建名为 script 的目录  
 在 script 目录下创建 main.lua 文件  
 其中的代码如下：
-```
+```Lua
 print("hello lua")
 ```
 VS 工程中

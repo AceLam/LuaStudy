@@ -9,13 +9,13 @@
 $ lua
 ```
 命令行窗口会有如下内容：
-```
+```Lua
 Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
 >
 ```
 输入 `print("hello lua")` 并回车  
 则命令行窗口会有如下内容：
-```
+```Lua
 Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
 > print("hello lua")
 hello lua
@@ -26,7 +26,7 @@ hello lua
 
 创建 main.lua 文件  
 其中的代码如下：
-```
+```Lua
 print("hello lua")
 ```
 在命令行模式下  
