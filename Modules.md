@@ -153,5 +153,8 @@ $ lua ~/Projects/Lua51/script/main.lua
 local info = debug.getinfo(1, "S");
 local path = info.short_src;
 local dir = string.match(path, "^.*[/\\]");
-package.path = package.path .. ";" .. dir .. "?.lua";
+
+if dir then
+    package.path = package.path .. ";" .. dir .. "?.lua";
+end
 ```
