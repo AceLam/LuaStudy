@@ -1,4 +1,4 @@
-# Lua 的源码编译与安装
+# 编译与安装
 
 [LuaReadMe]: http://www.lua.org/manual/5.3/readme.html
 [LuaReadMeCn]: https://cloudwu.github.io/lua53doc/

@@ -1,4 +1,4 @@
-# VS 调试 Lua 源码
+# 调试源码
 
 [Breakpoint]: /assets/breakpoint.png
 [Hit]: /assets/hit.png

@@ -1,4 +1,4 @@
-# 主要参考资料
+# 参考资料
 
 [LuaTutorial]: http://www.runoob.com/lua/lua-tutorial.html
 [LuaerBook]: http://book.luaer.cn/
