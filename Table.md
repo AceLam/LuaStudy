@@ -7,7 +7,7 @@
 
 ## 索引
 
-[Lua 参考手册-值与类型][ValueRef] 中这样写道：
+[Lua 参考手册-值与类型][ValueRef] 中这样写道：
 ```
 表是 Lua 中唯一的数据结构，
 它可被用于表示普通数组、序列、符号表、集合、记录、图、树等等。
@@ -142,7 +142,7 @@ foo4 的长度结果则由表构建时的 narray 决定
 ## 有序表的遍历
 
 值得注意的是，虽然 #foo4 为 6  
-但如果执行以下 lua 脚本代码，只会输出 nil 之前的元素：
+但如果执行以下 lua 脚本代码，只会输出 nil 之前的元素：
 ```Lua
 for i, v in ipairs(foo4) do
     print(i, v);
@@ -162,7 +162,7 @@ end
 在此简单介绍下一个好用的库 Serpent  
 [Serpent 的 GitHub 主页][Serpent]  
   
-把 serpent.lua 复制黏贴到 Lua51/script 目录下  
+把 serpent.lua 复制黏贴到 Lua51/script 目录下  
 然后在 require 其他模块之前，先键入以下代码：
 ```Lua
 serpent = require("serpent");

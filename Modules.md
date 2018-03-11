@@ -7,8 +7,8 @@
 
 在本文开始之前  
 可先浏览 [Lua 模块与包-菜鸟教程][LuaModulesPackages]  
-粗略了解下关于 Lua 模块/包 的基础知识  
-特别是 package.path 的相关内容  
+粗略了解下关于 Lua 模块/包 的基础知识  
+特别是 package.path 的相关内容  
   
 ## 我的研究
 
@@ -16,7 +16,7 @@
 得知了可以向 VS 项目中添加 `命令参数`  
 以达到执行命令行 `$ lua ~/Projects/Lua51/script/main.lua` 类似的效果  
   
-但在我研究的过程中  
+但在我研究的过程中  
 总是需要运行测试不同的 lua 代码  
 如果要因此而频繁去修改 `命令参数` 配置  
 显然不合适  
@@ -30,7 +30,7 @@
 
 解压的 lua 源码目录下的 test 目录  
 有很多测试用的 lua 脚本代码  
-把 test 目录复制到 `Lua51/script` 目录下  
+把 test 目录复制到 `Lua51/script` 目录下  
 编辑 `script/main.lua` ，内容如下：
 ```Lua
 modules = {
@@ -121,7 +121,7 @@ luaconf.h 中有这段代码：
 
 ## 
 那在路径中 . 所代表的当前路径是什么路径？   
-在 main.lua 中加入以下代码：
+在 main.lua 中加入以下代码：
 ```Lua
 local f = io.open("./lua_path.tmp", "w");
 f:close();
@@ -131,9 +131,9 @@ f:close();
 $ cd ~/Desktop/
 $ lua ~/Projects/Lua51/script/main.lua
 ```
-会在 `~/Desktop/` 目录下生成 lua_path.tmp 文件  
+会在 `~/Desktop/` 目录下生成 lua_path.tmp 文件  
 如果运行 VS 的 lua 项目  
-则会在 `X:\Lua51\lua\` 目录下生成 lua_path.tmp 文件  
+则会在 `X:\Lua51\lua\` 目录下生成 lua_path.tmp 文件  
 推论得出：
 ```
 路径中 . 所代表的当前路径为执行 lua 程序时所在的目录路径
