@@ -90,7 +90,7 @@ print(package.path);
 ```
 .\?.lua;X:\Lua51\x64\Debug\lua\?.lua;X:\Lua51\x64\Debug\lua\?\init.lua;X:\Lua51\x64\Debug\?.lua;X:\Lua51\x64\Debug\?\init.lua
 ```
-显然没有 `Lua51/script` 目录  
+显然没有 `Lua51/script` 目录  
 
 
 ## package.path
