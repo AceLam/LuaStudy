@@ -5,7 +5,8 @@
 值得注意的是，arg 和 ... 不能在同一函数内使用  
 否则会报 arg 为 nil 的错  
 可变参数的各种使用例子的代码和输出结果如下：
-```Lua
+
+```lua
 local function vargs1(...)
     print(select("#", ...)); --> 3
     print(select(2, ...)); --> 5       6
@@ -26,3 +27,4 @@ end
 vargs1(4, 5, 6);
 vargs2(7, 8, 9);
 ```
+

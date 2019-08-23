@@ -1,14 +1,10 @@
 # 表
 
-[ValueRef]: http://www.runoob.com/manual/lua53doc/manual.html#2.1
-[Constructors]: http://www.runoob.com/manual/lua53doc/manual.html#3.4.9
-[Length]: http://www.runoob.com/manual/lua53doc/manual.html#3.4.7
-[Serpent]: https://github.com/pkulchenko/serpent
-
 ## 索引
 
-[Lua 参考手册-值与类型][ValueRef] 中这样写道：
-```
+[Lua 参考手册-值与类型](http://www.runoob.com/manual/lua53doc/manual.html#2.1) 中这样写道：
+
+```text
 表是 Lua 中唯一的数据结构，
 它可被用于表示普通数组、序列、符号表、集合、记录、图、树等等。
 对于记录，Lua 使用域名作为索引。
@@ -17,9 +13,10 @@
 
 ## 表构建
 
-[Lua 参考手册-表构建][Constructors] 已经写得很详细了  
+[Lua 参考手册-表构建](http://www.runoob.com/manual/lua53doc/manual.html#3.4.9) 已经写得很详细了  
 不过值得注意的是，以下两种有序表的构建方式是有所不同的：
-```Lua
+
+```lua
 local foo1 = {
     [1] = 'a',
     [2] = 'b',
@@ -36,9 +33,11 @@ local foo2 = {
     'e',
 }
 ```
+
 不同之处在于，foo1 是哈希表，foo2 才是数组  
 看 ltable.c 文件的以下函数：
-```C
+
+```c
 Table *luaH_new (lua_State *L, int narray, int nhash) {
   Table *t = luaM_new(L, Table);
   luaC_link(L, obj2gco(t), LUA_TTABLE);
@@ -54,17 +53,18 @@ Table *luaH_new (lua_State *L, int narray, int nhash) {
   return t;
 }
 ```
+
 narray 是数组元素个数，nhash 是非数组元素个数  
 当 foo1 创建时 narray 为 0， nhash 为 5  
 当 foo2 创建时 narray 为 5， nhash 为 0  
-narray 的不同会导致取表长度时，运算过程和结果的不同  
-
+narray 的不同会导致取表长度时，运算过程和结果的不同
 
 ## 取长度
 
-[Lua 参考手册-取长度操作符][Length]  
-table 的取长度算法主要是 ltable.c 的 luaH_getn 和 unbound_search 函数：
-```C
+[Lua 参考手册-取长度操作符](http://www.runoob.com/manual/lua53doc/manual.html#3.4.7)  
+table 的取长度算法主要是 ltable.c 的 luaH\_getn 和 unbound\_search 函数：
+
+```c
 static int unbound_search (Table *t, unsigned int j) {
   unsigned int i = j;  /* i is zero or a present index */
   j++;
@@ -110,10 +110,12 @@ int luaH_getn (Table *t) {
   else return unbound_search(t, j);
 }
 ```
-其中 t->sizearray 就是由前面提到的 narray 赋值  
+
+其中 t-&gt;sizearray 就是由前面提到的 narray 赋值  
 故以 foo2 为例，`#foo2` 就会直接 return 这个值  
 但是按照以上的取长度算法，下面这段 lua 脚本代码的结果就比较特别：
-```Lua
+
+```lua
 local foo3 = {
     [1] = 'a',
     [2] = 'b',
@@ -134,22 +136,25 @@ local foo4 = {
 print(#foo3);
 print(#foo4);
 ```
-结果显示 foo3 的长度为 16，foo4 的长度为 6  
-foo3 的长度结果完全由 unbound_search 函数运算得出  
-foo4 的长度结果则由表构建时的 narray 决定  
 
+结果显示 foo3 的长度为 16，foo4 的长度为 6  
+foo3 的长度结果完全由 unbound\_search 函数运算得出  
+foo4 的长度结果则由表构建时的 narray 决定
 
 ## 有序表的遍历
 
-值得注意的是，虽然 #foo4 为 6  
+值得注意的是，虽然 \#foo4 为 6  
 但如果执行以下 lua 脚本代码，只会输出 nil 之前的元素：
-```Lua
+
+```lua
 for i, v in ipairs(foo4) do
     print(i, v);
 end
 ```
+
 结果为：
-```
+
+```text
 1       a
 2       b
 3       c
@@ -160,12 +165,15 @@ end
 在各种应用中  
 经常会使用到表的序列化与反序列化  
 在此简单介绍下一个好用的库 Serpent  
-[Serpent 的 GitHub 主页][Serpent]  
-  
+[Serpent 的 GitHub 主页](https://github.com/pkulchenko/serpent)
+
 把 serpent.lua 复制黏贴到 Lua51/script 目录下  
 然后在 require 其他模块之前，先键入以下代码：
-```Lua
+
+```lua
 serpent = require("serpent");
 ```
+
 即可随意使用 serpent.lua 定义的函数  
-其他详情请参考 [Serpent 的 GitHub 主页][Serpent]
+其他详情请参考 [Serpent 的 GitHub 主页](https://github.com/pkulchenko/serpent)
+

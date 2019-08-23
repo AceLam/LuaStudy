@@ -1,10 +1,11 @@
-# Summary
+# Table of contents
 
 * [前言](README.md)
-* [参考资料](Reference.md)
-* [编译与安装](Installation.md)
-* [运行脚本](RunCode.md)
-* [调试源码](VsDebug.md)
-* [模块/包](Modules.md)
-* [表](Table.md)
-* [函数](Functions.md)
+* [参考资料](reference.md)
+* [编译与安装](installation.md)
+* [运行脚本](runcode.md)
+* [调试源码](vsdebug.md)
+* [模块/包](modules.md)
+* [表](table.md)
+* [函数](functions.md)
+
