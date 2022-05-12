@@ -11,7 +11,7 @@
 
 在 [VS 调试 Lua](vsdebug.md) 中  
 得知了可以向 VS 项目中添加 `命令参数`  
-以达到执行命令行 `$ lua ~/Projects/Lua51/script/main.lua` 类似的效果
+以达到执行命令行 `$ lua ~/Projects/Lua51/script/main.lua` 类似的效果
 
 但在我研究的过程中  
 总是需要运行测试不同的 lua 代码  
@@ -27,7 +27,7 @@
 
 解压的 lua 源码目录下的 test 目录  
 有很多测试用的 lua 脚本代码  
-把 test 目录复制到 `Lua51/script` 目录下  
+把 test 目录复制到 `Lua51/script` 目录下  
 编辑 `script/main.lua` ，内容如下：
 
 ```lua
@@ -123,7 +123,7 @@ luaconf.h 中有这段代码：
 其中的注释翻译如下：
 
 ```text
-在 Windows 中，路径中的所有感叹号（'!'）都会被替换为当前进程的可执行文件的目录路径。
+在 Windows 中，路径中的所有感叹号（'!'）都会被替换为当前进程的可执行文件的目录路径。
 ```
 
 `X:\Lua51\x64\Debug` 这个路径因此而来
