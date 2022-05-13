@@ -1,5 +1,3 @@
-# 编译与安装
-
 ## 下载 Lua 源码
 
 [Lua 所有版本的源码](http://www.lua.org/versions.html)  
@@ -213,4 +211,3 @@ mingw32-make: *** [install] Error 1
 不过在 Windows 下已经生成可用的 lua.exe 和 luac.exe  
 没有必要强求完成 `make xxx install` 这一步  
 故在此不赘述修改步骤
-

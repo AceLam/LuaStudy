@@ -1,5 +1,3 @@
-# 运行脚本
-
 ## 命令行输入代码运行
 
 直接双击 lua.exe  
@@ -48,4 +46,3 @@ $ lua main.lua
 ```text
 hello lua
 ```
-

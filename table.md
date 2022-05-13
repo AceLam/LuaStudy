@@ -1,5 +1,3 @@
-# 表
-
 ## 索引
 
 [Lua 参考手册-值与类型](http://www.runoob.com/manual/lua53doc/manual.html#2.1) 中这样写道：
@@ -176,4 +174,3 @@ serpent = require("serpent");
 
 即可随意使用 serpent.lua 定义的函数  
 其他详情请参考 [Serpent 的 GitHub 主页](https://github.com/pkulchenko/serpent)
-

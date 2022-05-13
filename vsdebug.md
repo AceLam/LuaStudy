@@ -1,5 +1,3 @@
-# 调试源码
-
 ## 命令行输入代码运行
 
 利用 VS 编译完 Lua 源码之后  
@@ -32,4 +30,3 @@ print("hello lua")
 VS 工程中 `lua` 项目，`属性 -> 配置属性 -> 调试 -> 命令参数` ，添加 `$(SolutionDir)script\main.lua`  
 仍然在 `luaB_print` 函数中设置断点  
 运行即命中断点
-

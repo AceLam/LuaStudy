@@ -1,5 +1,3 @@
-# 模块/包
-
 ## 基础知识
 
 在本文开始之前  
@@ -171,4 +169,3 @@ if dir then
     package.path = package.path .. ";" .. dir .. "?.lua";
 end
 ```
-
