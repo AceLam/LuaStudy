@@ -1,5 +1,8 @@
 {
     "plugins": [
-        "highlight"
+        "highlight",
+        "comment",
+        "copy-code",
+        "image-zoom"
     ]
 }
