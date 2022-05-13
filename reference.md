@@ -8,5 +8,5 @@
 ## Lua 源码探究
 
 [Lua source internal-李创](https://github.com/lichuang/Lua-Source-Internal)  
-[Lua 源码欣赏-云风](https://www.codingnow.com/temp/readinglua.pdf)
+[Lua 源码欣赏-云风](https://github.com/AceLam/book-1/blob/master/PL%20lua%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90-%E4%BA%91%E9%A3%8E.pdf)
 
